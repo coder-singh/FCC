@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Survey Form</title>
+	<link rel="stylesheet" href="styles/index.css">
+</head>
+
+<body>
+	<h1 id="title">Survey Form</h1>
+	<div id="main">
+	
+		<p id="description">Help us improve</p>
+		<form id="survey-form">
+		
+		<fieldset>
+		<legend>Personal Information</legend>
+		<div class="input">
+		<div class="left">
+		<label id="name-label" for="name">Name : </label>
+		</div>
+		<div class="right">
+		<input type="text" id="name" placeholder="Enter your name here"	required>
+		<label id="red">*</label>
+		</div>
+		</div><!-- Name input div ends here -->
+		
+		<div class="input">
+		<div class="left">
+		<label id="email-label" for="email">Email : </label>
+		</div>
+		<div class="right">
+		<input type="email" id="email" placeholder="Enter your e-mail" required>
+		<label id="red">*</label>
+		</div>
+		</div><!-- Email input div ends here -->
+		
+		<div class="input">
+		<div class="left">
+		<label id="number-label" for="number">Age : </label>
+		</div>
+		<div class="right">
+		<input type="number" id="number" placeholder="Enter age" min="1" max="105">
+		</div>
+		</div><!-- Age input div ends here -->
+		
+		<div class="input">
+		<div class="left">
+		<label id="role-label" for="dropdown">Current role : </label>
+		</div>
+		<div class="right">
+		<select name="role" id="dropdown">
+			<option value="student">Student</option>
+			<option value="job">Full time job</option>
+			<option value="learner">Full time learner</option>
+			<option value="notsay">Prefer not to say</option>
+			<option value="other">Other</option>
+		</select>
+		</div>
+		</div><!-- Role input div ends here -->
+		
+		</fieldset>
+		
+		
+		<fieldset>
+		<legend>Your feedback</legend>
+		<div class="input">
+			<div class="left">
+			<label id="recomment-label" for="recommend">Would you recommend this website to a friend ? </label>
+			</div>
+			<div class="right">
+			<input type="radio" name="recommend" value="definitely">Definitely<br>
+			<input type="radio" name="recommend" value="maybe">Maybe<br>
+			<input type="radio" name="recommend" value="notsure">Not Sure
+			</div>
+		</div><!-- Recommend input div ends here -->
+		
+		<div class="input">
+		<div class="left">
+		<label id="like-label" for="dropdown">What do you like the most about this website ?  </label>
+		</div>
+		<div class="right">
+		<select name="likes" id="dropdown" required>
+			<option value="challenges">Challenges</option>
+			<option value="projects">Projects</option>
+			<option value="community">Community</option>
+			<option value="open">Open Source</option>
+		</select>
+		<label id="red">*</label>
+		</div>
+		</div><!-- Likes input div ends here -->
+		
+		<div class="input">
+		<div class="left>
+		<label id="improvement-label" for="improvement">Things that should be improved in the future (Check all that apply) :  </label>
+		</div>
+		<div class="right">
+		<input type="checkbox" name="" value="front">Front-end Projects<br>
+		<input type="checkbox" name="" value="back">Back-end Projects
+		</div>
+		</div><!-- Checkbox input div ends here -->
+		
+		<div class="input">
+		<div class="left">
+		<label id="comment-label" for="comments">Any Comments or Suggestions ? </label>
+		</div>
+		<div class="right">
+		<textarea name="comments" rows="5" cols="40" placeholder="Enter your comments here !!"></textarea>
+		</div>
+		</div><!-- Comment input div ends here -->
+		</fieldset>
+		
+		<button type="submit" id="submit">Submit</button>
+		</form>
+		
+	</div><!-- Main div ends here -->
+</body>
+<hr>
+<p id="footer">Designed and Coded by Satyendra Singh</p>
+</html> 

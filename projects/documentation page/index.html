@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Documentation</title>
+	<link rel="stylesheet" href="styles/index.css">
+	<link href="https://fonts.googleapis.com/css?family=Nunito|Pacifico|VT323" rel="stylesheet"> 
+	<script src="scripts/api.js"></script>
+	<script type="text/javascript" src="scripts/script.js"></script>
+</head>
+
+<body>
+	<nav id="navbar">
+	<div id="logo">
+		<img src="images/logo.png" width="50px" height="50px"/>
+		<header id="text">Sublime Text</header>
+	</div>
+	<h2>Documentation</h2>
+	<div id="links">
+	<div class="topic-head">Usage
+	<p class="topic"><a href="#Column_Selection" class="nav-link" target="main-doc">Column Selection</a></p>
+	<p class="topic"><a href="#Multiple_Selection" class="nav-link" target="main-doc">Multiple Selection</a></p>
+	<p class="topic"><a href="#Auto_Complete" class="nav-link">Auto Complete</a></p>
+	<p class="topic"><a href="#Tab_Completion" class="nav-link">Tab Completion</a></p>
+	<p class="topic"><a href="#Vintage_Mode" class="nav-link">Vintage Mode</a></p>
+	<p class="topic"><a href="#Projects" class="nav-link">Projects</a></p>
+	</div>
+		
+	<div class="topic-head">Customization
+	<p class="topic"><a href="#Settings" class="nav-link">Settings</a></p>
+	<p class="topic"><a href="#Changing_the_Font" class="nav-link">Changing the Font</a></p>
+	<p class="topic"><a href="#Indentation" class="nav-link">Indentation</a></p>
+	<p class="topic"><a href="#Spell_Checking" class="nav-link">Spell Checking</a></p>
+	<p class="topic"><a href="#Build_Systems" class="nav-link">Build Systems</a></p>
+	<p class="topic"><a href="#Packages" class="nav-link">Packages</a></p>
+	</div>
+	</div>
+	
+	</nav><!-- topics div ends -->
+	
+	<main id="main-doc">
+	
+	<section class="main-section" id="Column_Selection">
+		<header class="big-heading">Column Selection</header>
+		<p class="content">
+		Column selection can be used to select a rectangular area of a file. Column selection doesn't operate via a separate mode, instead it makes use of multiple selections.<br>
+		You can use additive selections to select multiple blocks of text, or subtractive selections to remove a block.
+		<p class="heading">Using the Mouse</p>
+		Different mouse buttons are used on each platform:
+		<p class="heading">OS X</p>
+		<ul>
+			<li>Left Mouse Button + <span class="key">&#8997</span></li>
+			<li>OR: Middle Mouse Button</li>
+			<li>Add to selection: <span class="key">&#8984</span></li>
+			<li>Subtract from selection: <span class="key">&#8679</span> + <span class="key">&#8984</span></li>
+		</ul><br>
+		<p class="heading">Windows</p>
+		<ul>
+			<li>Right Mouse Button+<span class="key">Shift</span></li>
+			<li>OR: Middle Mouse Button</li>
+			<li>Add to selection: <span class="key">Ctrl</span></li>
+			<li>Subtract from selection: <span class="key">Alt</span></li>
+		</ul><br>
+		<p class="heading">Linux</p>
+		<ul>
+			<li>Right Mouse Button + <span class="key">Shift</span></li>
+			<li>Add to selection: <span class="key">Ctrl</span></li>
+			<li>Subtract from selection: <span class="key">Alt</span></li>
+		</ul><br>
+		<p class="heading">Using the Keyboard</p>
+		<p class="heading">OS X</p>
+		<ul>
+			<li><span class="key">Ctrl</span> + <span class="key">Shift</span> + <span class="key">&#11014</span></li>
+			<li><span class="key">Ctrl</span> + <span class="key">Shift</span> + <span class="key">&#11015</span></li>
+		</ul><br>
+		<p class="heading">Windows</p>
+		<ul>
+			<li><span class="key">Ctrl</span> + <span class="key">Alt</span> + <span class="key">&#11014</span></li>
+			<li><span class="key">Ctrl</span> + <span class="key">Alt</span> + <span class="key">&#11015</span></li>
+		</ul><br>
+		<p class="heading">Linux</p>
+		<ul>
+			<li><span class="key">Ctrl</span> + <span class="key">Alt</span> + <span class="key">&#11014</span></li>
+			<li><span class="key">Ctrl</span> + <span class="key">Alt</span> + <span class="key">&#11015</span></li>
+		</u>
+		</p>
+	</section>
+	
+	<section class="main-section" id="Multiple_Selection">
+		<header class="big-heading">Multiple Selection</header>
+		<p class="content">
+		<p class="heading">Adding a Line</p>
+		To add the line above or below to the selection, use:
+		<ul>
+			<li>Windows/Linux: <span class="key">Ctrl</span> + <span class="key">Alt</span> + <span class="key">&#11014</span> and <span class="key">Ctrl</span> + <span class="key">Alt</span> + <span class="key">&#11015</span></li>
+			<li>Mac: <span class="key">&#8963</span> + <span class="key">&#8679</span> + <span class="key">&#11014</span> and <span class="key">&#8963</span> + <span class="key">&#8679</span> + <span class="key">&#11015</span></li>
+		</ul><br>
+		<br>
+		If you go too far, use Undo Selection to step backwards:
+		<ul>
+		<li>Windows/Linux: <span class="key">Ctrl</span> + <span class="key">U</span></li>
+		<li>Mac: <span class="key">&#8984</span> + <span class="key">U</span></li>
+		</ul><br>
+		<p class="heading">Splitting the Selection into Lines</p>
+		Select a block of lines, and then split it into many selections, one per line, using:
+		<ul>
+		<li>Windows/Linux: <span class="key">Ctrl</span> + <span class="key">Shift</span> + <span class="key">L</span></li>
+		<li>Mac: <span class="key">&#8679</span> + <span class="key">&#8984</span> + <span class="key">L</span></li>
+		</ul><br>
+		<p class="heading">Quick Add Next</p>
+		To add the next occurrence of the current word to the selection, use Quick Add Next, which is bound to:
+		<ul>
+		<li>Windows/Linux: <span class="key">Ctrl</span> + <span class="key">D</span></li>
+			<li>Mac: <span class="key">&#8984</span> + <span class="key">D</span></li>
+		</ul><br>
+		Again, if you go too far, use Undo Selection to step backwards:
+		<ul>
+			<li>Windows/Linux: <span class="key">Ctrl</span> + <span class="key">U</span></li>
+			<li>Mac: <span class="key">&#8984</span> + <span class="key">U</span></li>
+		</ul><br>
+		Individual occurrences can be skipped via Quick Skip Next, which is bound to:
+		<ul>
+			<li>Windows/Linux: <span class="key">Ctrl</span> + <span class="key">K</span>, <span class="key">Ctrl</span> + <span class="key">D</span></li>
+			<li>Mac: <span class="key">&#8984</span> + <span class="key">K</span>, <span class="key">&#8984</span> + <span class="key">D</span></li>
+		</ul><br>
+		<p class="heading">Find All</p>
+		To add all occurrences of the current word to the selection, use Find All:
+		<ul>
+			<li>Windows/Linux: <span class="key">Alt</span> + <span class="key">F3</span></li>
+			<li>Mac: <span class="key">&#8963</span> + <span class="key">&#8984</span> + <span class="key">G</span></li>
+		</ul><br>
+		<p class="heading">Single Selection</p>
+		To go from multiple selections to a single selection, press <span class="key">Esc</span>. 
+</p>
+	</section>
+	
+	<section class="main-section" id="Auto_Complete">
+		<header class="big-heading">Auto Complete</header>
+		<p class="content">
+		Auto complete shows the completion popup as you type, so you can fill in long words by typing only a few characters. It's enabled by default for source code and HTML (but only after entering a < character).
+		<p class="heading">Disabling Auto Complete</p>
+		Auto complete can be disabled with the <span class="highlight">auto_complete</span> setting. To disable it, add this line to the right-hand pane of <span class="highlight">Preferences &#9654 Settings</span>:
+		<code><pre><span class="green">"auto_complete"</span>: <span class="red">false</span></pre></code>
+		If auto complete is disabled, the completion popup can be shown manually, or tab can be used to insert the highest ranking completion without showing the popup.
+		<p class="heading">Manually Showing Completions</p>
+		Pressing  <span class="key">Ctrl</span> + <span class="key">Space</span> will show the completion popup if it's not currently showing. If it is showing, it'll select the next item.
+		<p class="heading">Commit on Tab</p>
+		By default, the selected item in the completion popup will be committed when enter is pressed. This can create ambiguity between committing the completion, and inserting a newline. By setting the <span class="highlight">auto_complete_commit_on_tab</span> setting to <span class="highlight">true</span>, enter will insert a newline, and tab will commit the current completion. There are other benefits, too: because Sublime Text knows there is no ambiguity, it will show a more curated list of completions, with the one you want more likely to be in first place.<br><br>
+		Enabling Commit on Tab is recommended, but it will take a short time to get used to.
+		</p>
+	</section>
+	
+	<section class="main-section" id="Tab_Completion">
+		<header class="big-heading">Tab Completion</header>
+		<p class="content">
+		Tab Completion allows quickly completing words by pressing the <span class="key">Tab</span> key. When enabled, pressing Tab will expand the text to the left of the cursor into the best match, using Sublime Text's fuzzy matching algorithm.
+		Tab Completion is enabled by default.
+		<p class="heading">Disabling Tab Completion</p>
+		Sometimes tab completion isn't desirable. To turn it off, add this line to the right-hand pane of <span class="highlight">Preferences &#9654 Settings</span>:
+		<code><pre><span class="green">"tab_completion"</span>: <span class="red">false</span></pre></code>
+		<p class="heading">Inserting Literal Tabs</p>
+		To insert a tab rather than a completion, press <span class="key">Shift</span> + <span class="key">Tab</span>.
+		<p class="heading">Changing the Completion</p>
+		Sometimes the completed text isn't what's desired: to change to an alternative, press  <span class="key">Ctrl</span> + <span class="key">Space</span>. This will roll back the completion, and display the standard auto complete list.
+		Alternatively, <span class="key">Tab</span> can be pressed again to cycle to the next completion.
+		<p class="heading">Completion Sources</p>
+		Information on completion sources, and creating your own completions, is available at docs.sublimetext.info.
+		</p>
+	</section>
+	
+	<section class="main-section" id="Vintage_Mode">
+		<header class="big-heading">Vintage Mode</header>
+		<p class="content">
+		Vintage is a vi mode editing package for Sublime Text. It allows you to combine vi's command mode with Sublime Text's features, including multiple selections.
+		Vintage mode is developed in the open, and patches are more than welcome. If you'd like to contribute, details are in the GitHub repo.
+		<p class="heading">Enabling Vintage</p>
+		Vintage is disabled by default, via the <span class="highlight">ignored_packages</span> setting. If you remove <span class="highlight">"Vintage"</span> from the list of ignored packages, you'll be able to edit with vi keys:
+		<ol type='1'>
+		<li>Select the <span class="highlight">Preferences &#9654 Settings</span> menu item</li>
+		<li>Edit the ignored_packages setting, changing it from:
+		<code><pre><span class="green">"ignored_packages"</span>: [<span class="green">"Vintage"</span>]</pre></code>
+			to:
+		<code><pre><span class="green">"ignored_packages"</span>: []</pre></code>
+			now save the file.</li>
+		<li>Vintage mode is now enabled - you'll see "INSERT MODE" listed in the status bar</li>
+		</ol>
+		Vintage starts in insert mode by default. This can be changed by adding the following setting to your user settings:
+		<code><pre><span class="green">"vintage_start_in_command_mode"</span>: <span class="red">true</span></pre></code>
+		
+		
+		<p class="heading">What's Included</p>
+		Vintage includes most basic actions: <span class="highlight">d</span> (delete), <span class="highlight">y</span> (copy), <span class="highlight">c</span> (change), <span class="highlight">gu</span> (lower case), <span class="highlight">gU</span> (upper case), <span class="highlight">g~</span> (swap case), <span class="highlight">g?</span> (rot13), <span class="highlight"><</span> (unindent), and <span class="highlight">></span> (indent).<br><br>
+		It also includes many motions, including <span class="highlight">l</span>, <span class="highlight">h</span>, <span class="highlight">j</span>, <span class="highlight">k</span>, <span class="highlight">W</span>, <span class="highlight">w</span>, <span class="highlight">e</span>, <span class="highlight">E</span>, <span class="highlight">b</span>, <span class="highlight">B</span>, <span class="highlight">alt+w</span> (move by sub-words), <span class="highlight">alt+W</span> (move backwards by sub-words), <span class="highlight">$</span>, <span class="highlight">^</span>, <span class="highlight">%</span>, <span class="highlight">0</span>, <span class="highlight">G</span>, <span class="highlight">gg</span>, <span class="highlight">f</span>, <span class="highlight">F</span>, <span class="highlight">t</span>, <span class="highlight">T</span>, <span class="highlight">^f</span>, <span class="highlight">^b</span>, <span class="highlight">H</span>, <span class="highlight">M</span>, and <span class="highlight">L</span>.
+		Text objects are supported, including words, quotes, brackets and tags.
+		Repeat (<span class="highlight">.</span>) is in there, as is specifying counts for commands and motions. Registers are supported, as are macros and bookmarks. Many other miscellaneous commands are supported too, such and <span class="highlight">*</span>, <span class="highlight">/</span>, <span class="highlight">n</span>, <span class="highlight">N</span>, <span class="highlight">s</span>, <span class="highlight">S</span> and more.
+		<p class="heading">What's Not</p>
+		Insert mode is regular Sublime Text editing, with the usual Sublime Text key bindings: vi insert mode key bindings are not emulated.
+		Ex commands are not implemented, apart from <span class="highlight">:w</span> and <span class="highlight">:e</span>, which work via the command palette.
+		<p class="heading">Under the Hood</p>
+		Vintage mode is implemented entirely via key bindings and the plugin API - feel free to browse through the Vintage package and see how it's put together. As an example, if you'd like to bind <span class="highlight">jj</span> to exit insert mode, you can add this key binding:
+<code><pre>{
+  <span class="green">"keys"</span>: [<span class="green">"j"</span>, <span class="green">"j"</span>],
+  <span class="green">"command"</span>: <span class="green">"exit_insert_mode"</span>,
+  <span class="green">"context"</span>:
+	[
+	  { <span class="green">"key"</span>: <span class="green">"setting.command_mode"</span>, <span class="green">"operand"</span>: <span class="red">false</span> },
+	  { <span class="green">"key"</span>: <span class="green">"setting.is_widget"</span>, <span class="green">"operand"</span>: <span class="red">false</span> }
+	]
+}</pre></code>
+		<p class="heading">OS X Lion</p>
+		In Lion, holding down a key won't repeat it, but will instead show a popup menu to select between character variations. This doesn't work well with command mode, so you may want to disable it. This can be done via entering this at the terminal:
+		<span class="highlight">defaults write com.sublimetext.2 ApplePressAndHoldEnabled -bool false</span>
+		<p class="heading">Ctrl Keys</p>
+		Vintage supports these <span class="key">Ctrl</span> key bindings:
+		<ul>
+			 <li><span class="key">Ctrl</span> + <span class="key">[</span> : Escape</li>
+			 <li><span class="key">Ctrl</span> + <span class="key">R</span> : Redo</li>
+			 <li><span class="key">Ctrl</span> + <span class="key">Y</span> : Scroll down one line</li>
+			 <li><span class="key">Ctrl</span> + <span class="key">E</span> : Scroll up one line</li>
+			 <li><span class="key">Ctrl</span> + <span class="key">F</span> : Page Down</li>
+			 <li><span class="key">Ctrl</span> + <span class="key">B</span> : Page Up</li>
+		However, because they conflict with other Sublime Text key bindings, these are disabled by default on Windows and Linux. They can be enabled with the <span class="highlight">vintage_ctrl_keys</span> setting:
+		<code><pre><span class="green">"vintage_ctrl_keys"</span>: <span class="red">true</span></pre></code>
+		<p class="heading">Ex Mode</p>
+		Please take a look at VintageEx for an Ex mode for Vintage
+		</p>
+	</section>
+	
+	<section class="main-section" id="Projects">
+		<header class="big-heading">Projects</header>
+		<p class="content">
+		Projects in Sublime Text are made up of two files: the .sublime-project file, which contains the project definition, and the .sublime-workspace file, which contains user specific data, such as the open files and the modifications to each.
+		As a general rule, the .sublime-project file would be checked into version control, while the .sublime-workspace file would not.
+		<p class="heading">Project Format</p>
+		.sublime-project files are JSON, and support three top level sections: <span class="highlight">folders</span>, for the included folders, <span class="highlight">settings</span>, for file-setting overrides, and <span class="highlight">build_systems</span>, for project specific build systems. An example:
+		<code><pre>
+{
+  <span class="green">"folders"</span>:
+  [
+	{
+	  <span class="green">"path"</span>: <span class="green">"src"</span>,
+	  <span class="green">"folder_exclude_patterns"</span>: [<span class="green">"backup"</span>],
+	  <span class="green">"follow_symlinks"</span>: <span class="red">true</span>
+	},
+	{
+	  <span class="green">"path"</span>: <span class="green">"docs"</span>,
+	  <span class="green">"name"</span>: <span class="green">"Documentation"</span>,
+	  <span class="green">"file_exclude_patterns"</span>: [<span class="green">"*.css"</span>]
+	}
+  ],
+  <span class="green">"settings"</span>:
+  {
+	<span class="green">"tab_size"</span>: <span class="red">8</span>
+  },
+  <span class="green">"build_systems"</span>:
+	[
+	  {
+		<span class="green">"name"</span>: <span class="green">"List"</span>,
+		<span class="green">"shell_cmd"</span>: <span class="green">"ls -l"</span>
+	  }
+	]
+}
+		</pre></code>
+		<p class="heading">Folders</p>
+		Each folder must have a path key, which may be relative to the project directory, or a fully qualified path. <br>Additional optional keys include:
+		<ul>
+			<li><span class="highlight">name</span> - A string used in place of the folder name in the side bar.</li>
+			<li><span class="highlight">file_include_patterns</span> - A list of strings for filenames to include from the folder. Anything not matching these patterns will be excluded. This is checked before <span class="highlight">file_exclude_patterns</span>.</li>
+			<li><span class="highlight">file_exclude_patterns</span> - A list of strings for filenames to exclude from the folder. This is added to the global setting of the same name. This is checked after <span class="highlight">file_include_patterns</span>.</li>
+			<li><span class="highlight">folder_include_patterns</span> - A list of strings for subfolder paths to include from the folder. Anything not matching these patterns will be excluded. This is checked before <span class="highlight">folder_exclude_patterns</span>.</li>
+			<li><span class="highlight">folder_exclude_patterns</span> - A list of strings for subfolder paths to exclude from the folder. This is added to the global setting of the same name. This is checked after <span class="highlight">folder_include_patterns</span>.</li>
+			<li><span class="highlight">binary_file_patterns</span> - A list of strings for filenames to treat as binary files, and thus ignored in Goto Anything or Find in Files.</li>
+			<li><span class="highlight">index_include_patterns</span> - A list of strings for full file paths to index in the folder. This is added to the global setting of the same name. Anything not matching these patterns will be excluded from the index. This is checked before <span class="highlight">index_exclude_patterns</span>.</li>
+			<li><span class="highlight">index_exclude_patterns</span> - A list of strings for file full paths to index in the folder. This is added to the global setting of the same name. This is checked after <span class="highlight">index_include_patterns</span>.</li>
+			<li><span class="highlight">follow_symlinks</span> - If symlinks should be followed when building the folder tree.</li>
+		</ul>
+		Converted projects from earlier versions may have a <span class="highlight">mount_points</span> entry under <span class="highlight">folders</span>. If you wish to use the exclude patterns, you'll need to change to the above format.
+		<p class="heading">Settings</p>
+		Settings may be specified here using the <span class="highlight">settings</span> key, and will override regular user settings. They will not, however, override syntax specific settings.
+		Note that only settings in the category Editor Settings may be controlled by a project.
+		<p class="heading">Build Systems</p>
+		<span class="highlight">build_systems</span> specifices a list of inline Build Systems definitions. In addition to the regular build system settings, a <span class="highlight">name</span> must be specified for each one. Build systems listed here will be available via the regular <span class="highlight">Tools &#9654 Build Systems</span> menu.
+		</p>
+	</section>
+	
+	<section class="main-section" id="Settings">
+		<header class="big-heading">Settings</header>
+		<p class="content">
+		Sublime Text has many different settings to customize its behavior. Settings are changed by editing text files: while this is a little trickier than using a GUI, you're rewarded with a flexible system.
+		<p class="heading">Settings</p>
+		Settings are accessed via the <span class="highlight">Preferences &#9654 Settings</span> menu item. The left-hand pane contains all of the default settings, along with a description of each. The right-hand pane is where customization can be saved.
+		<p class="heading">Categories</p>
+		The settings in Sublime Text are organized into three categories. The default settings file organizes the settings into sections for easier distinction.
+		<ul>
+		<li><b>Editor Settings:</b> These settings affect the behavior and functionality presented when editing text in a file. Examples include the <span class="highlight">font_face</span>, <span class="highlight">tab_size</span> and <span class="highlight">spell_check</span>. These settings are presented in the first section of the default settings file.</li>
+		<li><b>User Interface Settings:</b> These settings affect the general user interface, across all open windows. Examples include the <span class="highlight">theme</span>, <span class="highlight">animation_enabled</span> and <span class="highlight">overlay_scroll_bars</span>. These settings are presented in the second section of the default settings file.</li>
+		<li><b>Application Behavior Settings:</b> These settings affect the behavior of the application, across all open windows. Examples include the <span class="highlight">hot_exit</span>, <span class="highlight">index_files</span> and <span class="highlight">ignored_packages</span>. These settings are presented in the third section of the default settings file.</li>
+		</ul><br>
+		The User Interface Settings and Application Behavior Settings are global to the entire application and can not be controlled by a syntax specific settings file, nor the settings key in a .sublime-project.
+		<p class="heading">Settings Files</p>
+		Settings files are consulted in this order:
+		<ol>
+			<li>Packages/Default/Preferences.sublime-settings</li>
+			<li>Packages/Default/Preferences (&#60platform>).sublime-settings</li>
+			<li>Packages/User/Preferences.sublime-settings</li>
+			<li>&#60Project Settings></li>
+			<li>Packages/&#60syntax>/&#60syntax>.sublime-settings</li>
+			<li>Packages/User/&#60syntax>.sublime-settings</li>
+			<li>&#60Buffer Specific Settings></li>
+		</ol>
+		In general, you should place your settings in Packages/User/Preferences.sublime-settings, which is opened in the right-hand pane when selecting the menu item <span class="highlight">Preferences &#9654 Settings</span>. If you want to specify settings for a certain file type, for example, Python, you should place them in Packages/User/Python.sublime-settings. This can be accessed via the right-hand pane when a Python file is open, and the menu item <span class="highlight">Preferences &#9654 Settings - Syntax Specific</span> is selected.
+		<p class="heading">Syntax Specific Settings</p>
+		Settings may be specified on a per-syntax basis. Common uses for this are to have different indentation settings or the color scheme vary by file type.
+		You can edit the settings for the syntax of the current file by selecting the <span class="highlight">Preferences &#9654 Settings - Syntax Specific</span> menu item.
+		Note that only Editor Settings can be specified in syntax specific settings.
+		<p class="heading">Per-project Settings</p>
+		Settings can be set on a per-project basis, details are in the Project Documentation.
+		Note that only Editor Settings can be specified in project settings.
+		<p class="heading">Distraction Free Settings</p>
+		Distraction Free Mode has an additional settings file applied (Distraction Free.sublime-settings). You can place file settings in here to have them only apply when in Distraction Free Mode – access it from the <span class="highlight">Preferences &#9654 Settings - Distraction Free</span> menu item.
+		<p class="heading">Changing Settings with a Key Binding</p>
+		The <span class="highlight">toggle_setting</span> command can be used to toggle a setting. For example, to make a key binding that toggles the <span class="highlight">word_wrap</span> setting on the current file, you can use (in <span class="highlight">Preferences &#9654 Key Bindings</span>):
+		<code><pre>
+{
+  <span class="green">"keys"</span>: [<span class="green">"alt+w"</span>],
+  <span class="green">"command"</span>: <span class="green">"toggle_setting"</span>,
+  <span class="green">"args"</span>:
+	{
+	  <span class="green">"setting"</span>: <span class="green">"word_wrap"</span>
+	}
+}
+		</pre></code>
+		The <span class="highlight">set_setting</span> command can be used to set a setting to a specific value. For example, this key binding makes the current file use the Cobalt color scheme:
+		<code><pre>
+{
+  <span class="green">"keys"</span>: [<span class="green">"ctrl+k"</span>, <span class="green">"ctrl+c"</span>],
+  <span class="green">"command"</span>: <span class="green">"set_setting"</span>,
+  <span class="green">"args"</span>:
+	{
+      <span class="green">"setting"</span>: <span class="green">"color_scheme"</span>,
+	  <span class="green">"value"</span>: <span class="green">"Packages/Color Scheme - Default/Cobalt.tmTheme"</span>
+	}
+}
+		</pre></code>
+		The settings modified here are buffer specific settings: they override any settings placed in a settings file, but apply to the current file only.
+		<p class="heading">Troubleshooting</p>
+		As settings can be specified in several different places, sometimes in can be helpful to view the applied setting that's actually being used by the current file. You can do this by using the console:
+		<code><pre>view.settings().get(<span class="green">'font_face'</span>)</pre></code>
+		</p>
+	</section>
+	
+	<section id="Changing_the_Font" class="main-section">
+		<header class="big-heading">Changing the Font</header>
+		<p class="content">
+		Changing the font can be done via adding these lines to the right-hand pane of <span class="highlight">Preferences &#9654 Settings</span>:
+		<code><pre>
+<span class="green">"font_face"</span>: <span class="green">"Courier New"</span>,
+<span class="green">"font_size"</span>: <span class="red">10</span></pre></code>
+		and then change as desired. The font will change when you save.
+		You can see other settings to change by browsing through the left-hand pane of <span class="highlight">Preferences &#9654 Settings</span>. There are many things that can be customized in Sublime Text.
+		</p>
+	</section>
+	
+	<section class="main-section" id="Indentation">
+		<header class="big-heading">Indentation</header>
+		<p class="content">
+		Indentation settings determine the size of the tab stops, and control whether the tab key should insert tabs or spaces. In addition to the automatic detection, they can be customized globally, per-file type, or per-file.
+		<p class="heading">Settings</p>
+		tab_size 	Integer. The number of spaces a tab is considered equal to
+		translate_tabs_to_spaces 	Boolean, if <span class="highlight">true</span>, spaces will be inserted up to the next tab stop when tab is pressed, rather than inserting a tab character
+		detect_indentation 	Boolean, if <span class="highlight">true</span> (the default), <span class="highlight">tab_size</span> and <span class="highlight">translate_tabs_to_spaces</span> will be calculated automatically when loading a file
+		use_tab_stops 	Boolean, If <span class="highlight">translate_tabs_to_spaces</span> is <span class="highlight">true</span>, <span class="highlight">use_tab_stops</span> will make tab and backspace insert/delete up to the next tab stop
+		<p class="heading">Settings Files</p>
+
+		Settings files are consulted in this order:
+		<ol>
+			<li>Packages/Default/Preferences.sublime-settings</li>
+			<li>Packages/Default/Preferences (&#60platform>).sublime-settings</li>
+			<li>Packages/User/Preferences.sublime-settings</li>
+			<li>Packages/&#60syntax>/&#60syntax>.sublime-settings</li>
+			<li>Packages/User/&#60syntax>.sublime-settings</li>
+		</ol>
+		In general, you should place your settings in Packages/User/Preferences.sublime-settings. If you want to specify settings for a certain file type, for example, Python, you should place them in Packages/User/Python.sublime-settings.
+		<p class="heading">Per-syntax Settings</p>
+
+		Settings may be specified on a per-syntax basis. You can edit the settings for the current syntax using the <span class="highlight">Preferences &#9654 Settings - Syntax Specific</span> menu.
+		<p class="heading">Indentation Detection</p>
+
+		When a file is loaded, its contents are examined, and the <span class="highlight">tab_size</span> and <span class="highlight">translate_tabs_to_spaces</span> settings are set for that file. The status area will report when this happens. While this generally works well, you may want to disable it. You can do that with the <span class="highlight">detect_indentation</span> setting.
+
+		Indentation detection can be run manually via the <span class="highlight">View &#9654 Indentation &#9654 Guess Settings From Buffer</span> menu, which runs the <span class="highlight">detect_indentation</span> command.
+		<p class="heading">Converting Between Tabs and Spaces</p>
+
+		The <span class="highlight">View &#60 Indentation</span> menu has commands to convert leading whitespace in the current file between tabs and spaces. These menu items run the <span class="highlight">expand_tabs</span> and <span class="highlight">unexpand_tabs</span> commands.
+		<p class="heading">Automatic Indentation</p>
+
+		Automatic indentation guesses the amount of leading whitespace to insert on each line when you press enter. It's controlled with these settings:
+		auto_indent 	Boolean, enabled by default. Enables auto indent
+		smart_indent 	Boolean, enabled by default. Makes auto indent a little smarter, e.g., by indenting the next line after an if statement in C.
+		trim_automatic_white_space 	Boolean, enabled by default. Trims white space added by <span class="highlight">auto_indent</span> when moving the caret off the line.
+		indent_to_bracket 	
+
+		Boolean, disabled by default. Adds whitespace up to the first open bracket when indenting. Use when indenting like this:
+<code><pre>
+use_indent_to_bracket(to_indent,
+			like_this);
+</pre></code>
+		</p>
+	</section>
+	
+	<section id="Spell_Checking" class="main-section">
+		<header class="big-heading">Spell Checking</header>
+		<p class="content">
+		Sublime Text uses Hunspell for its spell checking support. Additional dictionaries can be obtained from the OpenOffice.org Extension List.
+		Dictionaries in a format ready to be used by Sublime Text are available at https://github.com/titoBouzout/Dictionaries.
+		<p class="heading">Dictionaries</p>
+		Sublime Text currently only supports UTF-8 encoded dictionaries. Most dictionaries are not encoded in UTF-8, instead using a more compact encoding for the language in question. To use a dictionary with Sublime Text, it'll first need to be converted into UTF-8.
+		Once you have a UTF-8 encoded dictionary, it can be installed by placing it in a package, for example, Packages/User/, which you can access from the <span class="highlight">Preferences &#9654 Browse Packages</span> menu item. Once the file is in place, you can select the dictionary from the <span class="highlight">View &#9654 Dictionary</span> menu.
+		<p class="heading">Settings</p>
+		There are two settings that effect the spell checking: <span class="highlight">spell_check</span>, which controls if spell checking is enabled, and <span class="highlight">dictionary</span>, which gives the path to the dictionary file to use. For example:
+		<code><pre>
+<span class="green">"spell_check"</span>: <span class="red">true</span>,
+<span class="green">"dictionary"</span>: <span class="green">"Packages/Language - English/en_US.dic"</span></pre></code>
+		Added and ignored words are stored in the user settings under the <span class="highlight">added_words</span> and <span class="highlight">ignored_words</span> keys.
+		<p class="heading">Commands</p>
+		<ul>
+			<li><span class="highlight">next_misspelling</span>: Select the next misspelling</li>
+			<li><span class="highlight">prev_misspelling</span>: Select the previous misspelling</li>
+			<li><span class="highlight">add_word</span>: Adds the word given by the <span class="highlight">word</span> argument to the add list</li>
+			<li><span class="highlight">ignore_word</span>: Adds the word given by the <span class="highlight">word</span> argument to the ignore list</li>
+		</ul>
+		</p>
+	</section>
+	
+	<section id="Build_Systems" class="main-section">
+		<header class="big-heading">Build Systems</header>
+		<p class="content">
+
+		Sublime Text provides build systems to allow users to run external programs. Examples of common uses for build systems include: compiling, transpiling, linting, and executing tests.
+<br><br>
+		Build systems are specified via JSON and saved in a file with the extension .sublime-build. A new build system can be created by the <span class="highlight">Tools &#9654 Build System &#9654 New Build System</span> menu item or the <span class="highlight">Build: New Build System</span> command palette entry.
+<br><br>
+		Build systems have various ways they can associate themselves with files and projects. Using this information, Sublime Text can intelligently display only viable build systems to the user. The built-in <span class="highlight">exec</span> target provides common options to get up and running quickly. For more complex requirements, build systems can target custom Sublime Text commands written in Python.
+
+		<p class="heading">Basic Example</p>
+
+		The following is a basic example of a build system. This build system will execute the currently-open Python file.
+<code><pre>
+{
+  <span class="green">"cmd"</span>: [<span class="green">"python"</span>, <span class="green">"$file"</span>],
+  <span class="green">"selector"</span>: <span class="green">"source.python"</span>,
+  <span class="green">"file_regex"</span>: <span class="green">"^\\s*File \"(...*?)\", line ([0-9]*)"</span>
+}</pre></code>
+
+		The Usage and Options sections will discuss how to use and customize a build system.
+		<p class="heading">Usage</p>
+
+		Build systems include the following functionality:
+		<ul>
+			<li>Automatic selection of a build system based on file type</li>
+			<li>Remembering the last used build system</li>
+			<li>Navigation of build system results</li>
+			<li>Ability to cancel a build</li>
+		</ul>
+		<p class="heading">Advanced Example</p>
+
+		The following example shows a custom <span class="highlight">target</span> command, with the ability to cancel a build and navigate results.
+	<br><br>
+		A <span class="highlight">target</span> for a build system should be a <span class="highlight">sublime.WindowCommand</span>. This will provide the instance variable of <span class="highlight">self.window</span> to allow interaction with the current project, window and active view.
+<br><br>
+		Please note that the following example is somewhat simplistic in its implementation, and it won't handle many common edge cases.
+<br><br>
+		The following Python can be saved to a file named Package/User/my_example_build.py:
+<code><pre>
+<span class="green">import</span> sublime
+<span class="green">import</span> sublime_plugin
+
+<span class="green">import</span> subprocess
+<span class="green">import</span> threading
+<span class="green">import</span> os
+
+
+<span class="green">class</span> MyExampleBuildCommand(sublime_plugin.WindowCommand):
+
+  encoding <span class="red">=</span> <span class="green">'utf8'</span>
+  killed <span class="red">=</span> <span class="red">False</span>
+  proc <span class="red">=</span> None
+  panel <span class="red">=</span> None
+  panel_lock <span class="red">=</span> threading.Lock()
+
+  <span class="green">def</span> is_enabled(self, lint=<span class="red">False</span>, integration=<span class="red">False</span>, kill=<span class="red">False</span>):
+	# The Cancel build option should only be available
+	# when the process <span class="green">is</span> still running
+	<span class="green">if</span> kill:
+	  <span class="green">return</span> self.proc <span class="green">is</span> not None and self.proc.poll() <span class="green">is</span> None
+	<span class="green">return</span> <span class="red">True</span>
+
+  <span class="green">def</span> run(self, lint=<span class="red">False</span>, integration=<span class="red">False</span>, kill=<span class="red">False</span>):
+	<span class="green">if</span> kill:
+	  <span class="green">if</span> self.proc:
+		self.killed <span class="red">=</span> <span class="red">True</span>
+		self.proc.terminate()
+  return
+
+  vars <span class="red">=</span> self.window.extract_variables()
+  working_dir <span class="red">=</span> vars[<span class="green">'file_path'</span>]
+
+    # A lock <span class="green">is</span> used to ensure only one thread is
+    # touching the output panel at a time
+	    <span class="green">with'</span> self.panel_lock:
+	# Creating the panel implicitly clears any previous contents
+	    self.panel <span class="red">=</span> self.window.create_output_panel('exec')
+
+	# Enable result navigation. The result_file_regex does
+	# the primary matching, but result_line_regex <span class="green">is</span> used
+	# when build output includes some entries that only
+	# contain line/column info beneath a previous line
+	# listing the file info. The result_base_dir sets the
+	# path to resolve relative file names against.
+	settings <span class="red">=</span> self.panel.settings()
+	settings.set(
+      <span class="green">'result_file_regex'</span>,
+	   r<span class="green">'^File "([^"]+)" line (\d+) col (\d+)'</span>
+	)
+	settings.set(
+	  <span class="green">'result_line_regex'</span>,
+	  r<span class="green">'^\s+line (\d+) col (\d+)'</span>
+	)
+	settings.set(<span class="green">'result_base_dir'</span>, working_dir)
+
+	self.window.run_command(<span class="green">'show_panel'</span>, {<span class="green">'panel'</span>: <span class="green">'output.exec'</span>})
+
+	  <span class="green">if</span> self.proc <span class="green">is</span> not None:
+		self.proc.terminate()
+		self.proc <span class="red">=</span> None
+
+	args <span class="red">=</span> ['my_cli']
+	<span class="green">if</span> lint:
+	  args.append('-l')
+	el<span class="green">if</span> integration:
+	  args.append('-i')
+	  args.append(vars['file_name'])
+	  self.proc <span class="red">=</span> subprocess.Popen(
+	args,
+	stdout=subprocess.PIPE,
+	stderr=subprocess.STDOUT,
+	cwd=working_dir
+	)
+	self.killed <span class="red">=</span> <span class="red">False</span>
+
+	threading.Thread(
+	  target=self.read_handle,
+		args=(self.proc.stdout,)
+	).start()
+
+  <span class="green">def</span> read_handle(self, handle):
+	chunk_size <span class="red">=</span> 2 <span class="red">**</span> 13
+	out <span class="red">=</span> b''
+	<span class="green">while</span> <span class="red">True</span>:
+	  <span class="green">try</span>:
+		data <span class="red">=</span> os.read(handle.fileno(), chunk_size)
+		# <span class="green">if</span> exactly the requested number of bytes was
+		# read, there may be more data, and the current
+		# data may contain part of a multibyte char
+		out += data
+		<span class="green">if</span> len(data) <span class="red">==</span> chunk_size:
+			continue
+		<span class="green">if</span> data <span class="red">==</span> b'' and out <span class="red">==</span> b'':
+			<span class="green">raise</span> IOError(<span class="green">'EOF'</span>)
+		# We pass out to a function to ensure the
+		# timeout gets the value of out right now,
+		# rather than a future (mutated) version
+		self.queue_write(out.decode(self.encoding))
+		<span class="green">if</span> data <span class="red">==</span> b'':
+			<span class="green">raise</span> IOError(<span class="green">'EOF'</span>)
+		out <span class="red">=</span> b''
+		<span class="green">except</span> (UnicodeDecodeError) as e:
+			msg <span class="red">=</span> <span class="green">'Error decoding output using %s - %s'</span>
+			self.queue_write(msg  % (self.encoding, str(e)))
+			break
+		<span class="green">except</span> (IOError):
+			<span class="green">if</span> self.killed:
+				msg <span class="red">=</span> <span class="green">'Cancelled'</span>
+			else:
+				msg <span class="red">=</span> <span class="green">'Finished'</span>
+			self.queue_write(<span class="green">'\n[%s]'</span> % msg)
+			break
+
+  <span class="green">def</span> queue_write(self, text):
+	sublime.set_timeout(<span class="green">lambda</span>: self.do_write(text), 1)
+
+  <span class="green">def</span> do_write(self, text):
+	<span class="green">with'</span> self.panel_lock:
+	  self.panel.run_command(<span class="green">'append'</span>, {<span class="green">'characters'</span>: text})
+</pre></code>
+		The custom <span class="highlight">MyExampleBuildCommand</span> can be configured as a build system using the following JSON saved to a file named Packages/User/My Example Build.sublime-build:
+<code><pre>
+{
+  <span class="green">"target"</span>: <span class="green">"my_example_build"</span>,
+  <span class="green">"selector"</span>: <span class="green">"source.mylang"</span>,
+  <span class="green">"cancel"</span>: {<span class="green">"kill"</span>: <span class="red">true</span>},
+  <span class="green">"variants"</span>: [
+	{
+	  <span class="green">"name"</span>: <span class="green">"Lint"</span>,
+	  <span class="green">"lint"</span>: <span class="red">true</span>
+	},
+	{
+	  <span class="green">"name"</span>: <span class="green">"Integration Tests"</span>,
+	  <span class="green">"integration"</span>: <span class="red">true</span>
+	}
+  ]
+}</pre></code>
+
+		</p>
+	</section>
+	
+	<section id="Packages" class="main-section">
+		<header class="big-heading">Packages</header>
+		<p class="content">
+
+		Packages are a collection of resource files used by Sublime Text: plugins, syntax highlighting definitions, menus, snippets and more. Sublime Text ships with several packages, and more user created ones are available.
+<br><br>
+		Packages are stored in .sublime-package files, which are zip files with a different extension. Packages may also be stored unzipped within a directory, or a mix of the two: any loose files in the package directory will override files stored in the .sublime-package file.
+		<p class="heading">Locations</p>
+
+		Zipped packages may be stored in:
+		<ul>
+			<li>&#60executable_path>/Packages/</li>
+			<li>&#60data_path>/Installed Packages/</li>
+		</ul>
+		Loose packages may be stored in:
+		<ul>
+			<li>&#60data_path>/Packages/</li>
+		</ul>
+		For example, the package Python is stored in &#60executable_path>/Packages/Python.sublime-package, and any files in the &#60data_path>/Packages/Python/ directory will override those stored in the .sublime-package file.
+<br><br>
+		In general, &#60executable_path>/Packages/ is for packages that ship with Sublime Text, and &#60data_path>/Installed Packages/ is for packages installed by the user.
+		<p class="heading">Special Packages</p>
+
+		There are two special packages: Default and User. Default is always ordered first, and User is always ordered last. Package ordering comes into effect when merging files between packages, for example Main.sublime-menu. Any package may contain a file called Main.sublime-menu, however this won't override the main menu, instead the files will be merged according to the order of the packages.
+<br><br>
+		Packages other than Default and User are ordered alphabetically.
+		<p class="heading">Creating a New Package</p>
+
+		To create a new package, simply create a new directory under &#60data_path>/Installed Packages/. You can access this directory from the Preferences &#9654 Browse Packages menu.
+		<p class="heading">Overriding Files From a Zipped Package</p>
+
+		To override a file in an existing package, just create a file with the same name under the Packages/&#60Package Name>/ directory.
+<br><br>
+		For example to override the file function.sublime-snippet in the Python.sublime-package package that ships with Sublime Text, create a directory called Python under the &#60data_path>/Packages/ directory, and place your function.sublime-snippet file there.
+		</p>
+	</section>
+	
+	</main><!-- main div ends -->
+</body>
+</html> 

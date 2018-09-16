@@ -1,0 +1,131 @@
+input[type=text], input[type=number], input[type=email]{
+	width: 60%;
+	border-radius: 5px;
+	border: 2px purple solid;
+	height: 25px;
+	padding: 3px 3px 3px 3px;
+}
+
+textarea{
+	border: 2px purple solid;
+}
+
+select{
+	width: 60%;
+	border-radius: 5px;
+	border: 2px purple solid;
+	padding: 3px 3px 3px 3px;
+	height: 35px;
+}
+
+input[type=radio], input[type=checkbox]{
+	margin-bottom: 5px;
+	margin-right: 7px;
+	background-color: purple;
+color: purple;
+}
+
+
+input[type=text]:focus, input[type=email]:focus, input[type=number]:focus, textarea:focus{
+	  animation-name: colorful;
+	  animation-duration: 1s;
+	  animation-fill-mode: forwards;
+}
+@keyframes colorful {
+  0% {
+	  background-color: white;
+  }
+  100% {
+	background-color: #ddd;
+  }
+}
+
+fieldset{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+legend{
+	font-size: 20px;
+}
+
+h1{
+	color: rgba(255, 255, 255, 0.8);
+	margin-bottom: 30px;
+	text-align: center;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	font-size: 48px;
+}
+
+body{
+	color: #333333;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	background: linear-gradient(45deg, cyan, purple);
+	line-height: 25px;
+	font-size: 17px;
+	background-attachment: fixed;
+}
+
+#main{
+	margin: auto;
+	background: white;
+	border-radius: 5px;
+	padding: 10px 10px 10px 10px;
+	width: 60%;
+}
+
+#description{
+	font-size: 25px;
+	width: 50%;
+	background: pink;
+	box-shadow: 0 8px 6px -6px black;
+	border-radius: 4px;
+	padding: 10px 10px 10px 10px;
+	margin: 5px 0px 0px -60px;
+}
+
+.input{
+	display: grid;
+	grid-template-columns: 45% 45%;
+	border-radius: 10px;
+	padding: 5px 5px 5px 5px;
+	margin: 5px 5px 5px 5px;
+}
+.left{
+	text-align: right;
+	padding: 5px 20px 5px 5px;
+	align-self: center;
+}
+.right{
+	align-self: center;
+}
+#red{
+	color: red;
+}
+button{
+	display: block;
+	margin: auto;
+	width: 20%;
+	font-size: 18px;
+	border-radius: 5px;
+	border: none;
+	background-color: rgba(180, 90, 180, 0.5);
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+button:hover{
+	  animation-name: anim;
+	  animation-duration: 1s;
+	  animation-fill-mode: forwards;
+}
+@keyframes anim {
+  100% {
+	background-color: rgba(180, 90, 180, 0.7);
+  }
+}
+
+#footer{
+	font-size: 20px;
+	color: white;
+	text-align: center;
+}
