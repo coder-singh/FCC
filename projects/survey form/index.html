@@ -3,59 +3,66 @@
 <head>
 	<title>Survey Form</title>
 	<link rel="stylesheet" href="styles/index.css">
+	<link rel="stylesheet" href="styles/bootstrap.min.css">
+	<script src="scripts/bootstrap.min.js"></script>
 </head>
 
 <body>
 	<h1 id="title">Survey Form</h1>
-	<div id="main">
+	<div id="main" class="container">
 	
 		<p id="description">Help us improve</p>
-		<form id="survey-form">
+		
+		
+		<form id="survey-form" class="form-horizontal">
 		
 		<fieldset>
 		<legend>Personal Information</legend>
-		<div class="input">
-		<div class="left">
-		<label id="name-label" for="name">Name : </label>
-		</div>
-		<div class="right">
-		<input type="text" id="name" placeholder="Enter your name here"	required>
-		<label id="red">*</label>
-		</div>
+		
+		<div class="form-group">
+			<label id="name-label" class="col-md-4 control-label text-right">Name</label>
+			<div class="col-md-6 inputGroupContainer">
+				<div class="input-group">
+					<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+					<input type="text" id="name" placeholder="Enter your name here"	class="form-control" required>
+				</div>
+			</div>
 		</div><!-- Name input div ends here -->
 		
-		<div class="input">
-		<div class="left">
-		<label id="email-label" for="email">Email : </label>
-		</div>
-		<div class="right">
-		<input type="email" id="email" placeholder="Enter your e-mail" required>
-		<label id="red">*</label>
-		</div>
+		<div class="form-group">
+			<label id="email-label" for="email" class="col-md-4 text-right form-label">Email</label>
+			<div class="col-md-6 inputGroupContainer">
+				<div class="input-group">
+					<span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+				<input type="email" id="email" class="form-control" placeholder="Enter your e-mail" required>
+				</div>
+			</div>
 		</div><!-- Email input div ends here -->
 		
-		<div class="input">
-		<div class="left">
-		<label id="number-label" for="number">Age : </label>
-		</div>
-		<div class="right">
-		<input type="number" id="number" placeholder="Enter age" min="1" max="105">
-		</div>
+		<div class="form-group">
+			<label id="number-label" for="number" class="col-md-4 text-right form-label">Age</label>
+			<div class="col-md-6 inputGroupContainer">
+				<div class="input-group">
+					<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+				<input type="number" id="number" class="form-control" placeholder="Enter age" min="1" max="105">
+				</div>
+			</div>
 		</div><!-- Age input div ends here -->
 		
-		<div class="input">
-		<div class="left">
-		<label id="role-label" for="dropdown">Current role : </label>
-		</div>
-		<div class="right">
-		<select name="role" id="dropdown">
-			<option value="student">Student</option>
-			<option value="job">Full time job</option>
-			<option value="learner">Full time learner</option>
-			<option value="notsay">Prefer not to say</option>
-			<option value="other">Other</option>
-		</select>
-		</div>
+		<div class="form-group">
+			<label id="role-label" class="col-md-4 text-right form-label">Current role</label>
+			<div class="col-md-6 inputGroupContainer">
+				<div class="input-group">
+					<span class="input-group-addon"><i class="glyphicon glyphicon-briefcase"></i></span>
+				<select name="role" id="dropdown" class="form-control">
+					<option value="student">Student</option>
+					<option value="job">Full time job</option>
+					<option value="learner">Full time learner</option>
+					<option value="notsay">Prefer not to say</option>
+					<option value="other">Other</option>
+				</select>
+				</div>
+			</div>
 		</div><!-- Role input div ends here -->
 		
 		</fieldset>
@@ -63,53 +70,72 @@
 		
 		<fieldset>
 		<legend>Your feedback</legend>
-		<div class="input">
-			<div class="left">
-			<label id="recomment-label" for="recommend">Would you recommend this website to a friend ? </label>
-			</div>
-			<div class="right">
-			<input type="radio" name="recommend" value="definitely">Definitely<br>
-			<input type="radio" name="recommend" value="maybe">Maybe<br>
-			<input type="radio" name="recommend" value="notsure">Not Sure
+		
+		<div class="form-group">
+			<label id="recomment-label" class="col-md-4 text-right form-label">Would you recommend this website to a friend ? </label>
+			<div class="col-md-6">
+				<div class="form-check">
+					<input type="radio" name="recommend" value="definitely" class="form-check-input" id="def">
+					<label class="form-check-label" for="def">Definitely</label>
+				</div>
+				<div class="form-check">
+					<input type="radio" name="recommend" value="maybe" class="form-check-input" id="may">
+					<label class="form-check-label" for="may">Maybe</label>
+				</div>
+				<div class="form-check">
+					<input type="radio" name="recommend" value="notsure" class="form-check-input" id="not">
+					<label class="form-check-label" for="not">Not Sure</label>
+				</div>
 			</div>
 		</div><!-- Recommend input div ends here -->
 		
-		<div class="input">
-		<div class="left">
-		<label id="like-label" for="dropdown">What do you like the most about this website ?  </label>
-		</div>
-		<div class="right">
-		<select name="likes" id="dropdown" required>
-			<option value="challenges">Challenges</option>
-			<option value="projects">Projects</option>
-			<option value="community">Community</option>
-			<option value="open">Open Source</option>
-		</select>
-		<label id="red">*</label>
-		</div>
+		<div class="form-group">
+			<label id="like-label" for="dropdown" class="form-label col-md-4 text-right">What do you like the most about this website ?</label>
+			<div class="col-md-6 inputGroupContainer">
+				<div class="input-group">
+					<span class="input-group-addon"><i class="glyphicon glyphicon-heart"></i></span>
+				<select name="likes" id="dropdown" class="form-control" required>
+					<option value="challenges">Challenges</option>
+					<option value="projects">Projects</option>
+					<option value="community">Community</option>
+					<option value="open">Open Source</option>
+				</select>
+				</div>
+			</div>
 		</div><!-- Likes input div ends here -->
 		
-		<div class="input">
-		<div class="left>
-		<label id="improvement-label" for="improvement">Things that should be improved in the future (Check all that apply) :  </label>
-		</div>
-		<div class="right">
-		<input type="checkbox" name="" value="front">Front-end Projects<br>
-		<input type="checkbox" name="" value="back">Back-end Projects
-		</div>
+		<div class="form-group">
+			<label id="improvement-label" for="improvement" class="form-label col-md-4 text-right">Things that should be improved in the future (Check all that apply)</label>
+			<div class="col-md-6">
+				<div class="form-check form-check-inline">
+					<input type="checkbox" name="" value="front" class="form-check-input" id="front">
+					<label class="form-check-label" for="front">Front-end Projects</label>
+				</div>
+				<div class="form-check form-check-inline">
+					<input type="checkbox" name="" value="back" class="form-check-input" id="back">
+					<label class="form-check-label" for="back">Back-end Projects</label>
+				</div>
+			</div>
 		</div><!-- Checkbox input div ends here -->
 		
-		<div class="input">
-		<div class="left">
-		<label id="comment-label" for="comments">Any Comments or Suggestions ? </label>
-		</div>
-		<div class="right">
-		<textarea name="comments" rows="5" cols="40" placeholder="Enter your comments here !!"></textarea>
-		</div>
+		
+		<div class="form-group">
+			<label id="comment-label" for="comments" class="form-label col-md-4 text-right">Any Comments or Suggestions ? </label>
+			<div class="col-md-6 inputGroupContainer">
+				<div class="input-group">
+					<span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+				<textarea name="comments" rows="3" cols="40" placeholder="Enter your comments here !!" class="form-control"></textarea>
+			</div>
+			</div>
 		</div><!-- Comment input div ends here -->
 		</fieldset>
 		
-		<button type="submit" id="submit">Submit</button>
+		<div class="form-group">
+		<label class="col-md-4"></label>
+		<button type="submit" id="submit" class="btn btn-primary"><span class="col-md-4 glyphicon glyphicon-send"></span> Submit</button>
+		</div>
+		
+		
 		</form>
 		
 	</div><!-- Main div ends here -->
